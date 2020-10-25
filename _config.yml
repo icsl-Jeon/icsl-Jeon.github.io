@@ -12,7 +12,7 @@ default_img:
 
 # Profile settings
 name: Boseong Felipe Jeon
-profile_img: "/assets/IMG_6950.jpg"
+profile_img: "assets/IMG_6950.jpg"
 profile: 
 social:
   github: 
