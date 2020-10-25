@@ -1,9 +1,9 @@
 # Site/SEO settings
-email: 
+email: junbs95@gmail.com
 permalink: /:year/:month/:day/:title/
 google_analytics: 
 
-title: Trophy
+title: Aerial robotics researcher 
 description: 
 url: "http://icsl-Jeon.github.io/"
 baseurl: ""
@@ -11,7 +11,7 @@ twitter_username:
 default_img: 
 
 # Profile settings
-name: 
+name: Boseong Felipe Jeon
 profile_img: 
 profile: 
 social:
