@@ -3,12 +3,12 @@ email: junbs95@gmail.com
 permalink: /:year/:month/:day/:title/
 google_analytics: 
 
-title: Aerial robotics engineer
-description: 
+title: BOSEONG FELIPE JEON
+description: Aerial robotics researcher
 url: http://icsl-Jeon.github.io
 baseurl: ""
 twitter_username: 
-cover: "/assets/IMG_6950.jpg"
+default_img: "/assets/IMG_6950.jpg"
 
 
 # Profile settings
