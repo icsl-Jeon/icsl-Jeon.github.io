@@ -3,7 +3,7 @@ email: junbs95@gmail.com
 permalink: /:year/:month/:day/:title/
 google_analytics: 
 
-title: Aerial \n robotics \n researcher 
+title: Aerial robotics engineer
 description: 
 url: "http://icsl-Jeon.github.io/"
 baseurl: ""
@@ -12,7 +12,7 @@ default_img:
 
 # Profile settings
 name: Boseong Felipe Jeon
-profile_img: assets/IMG_6950
+profile_img: "/assets/IMG_6950.png"
 profile: 
 social:
   github: 
