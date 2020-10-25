@@ -8,11 +8,12 @@ description:
 url: "http://icsl-Jeon.github.io/"
 baseurl: ""
 twitter_username: 
-default_img: 
+default_img: "/assets/IMG_6950.jpg"
+
 
 # Profile settings
 name: Boseong Felipe Jeon
-profile_img: "assets/IMG_6950.jpg"
+profile_img: "/assets/IMG_6950.jpg"
 profile: 
 social:
   github: 
