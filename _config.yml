@@ -8,12 +8,12 @@ description: Aerial robotics researcher
 url: http://icsl-Jeon.github.io
 baseurl: ""
 twitter_username: 
-default_img: "/assets/IMG_6950.jpg"
+default_img: /assets/IMG_6950.jpg
 
 
 # Profile settings
 name: Boseong Felipe Jeon
-profile_img: "/assets/IMG_6950.jpg"
+profile_img: /assets/IMG_6950.jpg
 profile: Doctoral candidate of Seoul national university 
 social:
   github: 
