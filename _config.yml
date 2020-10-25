@@ -5,10 +5,10 @@ google_analytics:
 
 title: Aerial robotics engineer
 description: 
-url: "http://icsl-Jeon.github.io/"
+url: http://icsl-Jeon.github.io
 baseurl: ""
 twitter_username: 
-default_img: "/assets/IMG_6950.jpg"
+cover: "/assets/IMG_6950.jpg"
 
 
 # Profile settings
