@@ -1,52 +1,44 @@
-locale: "en-US"
-title: Strata # Title of your site
-url: https://icsl-jeon.github.io/ # the base hostname & protocol for your site
-baseurl: "" # the subpath of your site, e.g. /blog/
-google_analytics_key: ""
+# Site settings
+title: Boseong Felipe Jeon
+description: 'Aerial robotics researcher'
+url: 'http://icsl-Jeon.github.io'
+baseurl: ''
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
+# disable_landing_page: true
 
-# Default description in social shares for the jekyll-seo-tag gem
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-
-# Author details for the jekyll-seo-tag gem
 author:
-  name: Boseong Felipe Jeon
-  email: junbs95@gmail.com
-  twitter: # twitter username without the @ symbol
+  name: 'Boseong Felipe Jeon'
+  email: josh@joshgerdes.com
+  github_username: icsl-Jeon
+  facebook_username: "https://www.youtube.com/channel/UCPeLtCD0ouhFdLO60V7pjlw?view_as=subscriber"
 
-# Social details for the jekyll-seo-tag gem
-social:
-  name: Strata Reloaded Template
-  links:
-    - https://github.com/comfusion/strata-reloaded-jekyll-template
 
-permalink: pretty
 
-gems:
-  - "jekyll-feed"
-  - "jekyll-seo-tag"
-  - "jekyll-paginate"
-  - "jekyll-sitemap"
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
 
-# Jekyll SEO Tag
-webmaster_verifications:
-  google: # 1234
-  bing: # 1234
-  alexa: # 1234
-  yandex: # 1234
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
 
-# -----------
-# CloudCannon
+sass:
+    sass_dir: _sass
+    style: compressed
 
-social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - RSS
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
