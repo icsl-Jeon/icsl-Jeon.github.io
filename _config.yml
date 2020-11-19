@@ -13,7 +13,7 @@ default_img: "/assets/img/IMG_6950.JPG"
 
 # Profile settings
 name: "Boseong Felipe Jeon"
-profile_img: "/assets/img/IMG_6950.JPG"
+profile_img: "https://github.com/icsl-Jeon/icsl-Jeon.github.io/tree/main/assets/img/IMG_6950.JPG"
 profile: "Doctoral candidate of Seoul national university"
 social:
   github: "https://github.com/icsl-Jeon"
