@@ -1,5 +1,5 @@
 # Site/SEO settings
-email: junbs95@gmail.com
+email: "junbs95@gmail.com"
 permalink: /:year/:month/:day/:title/
 google_analytics: 
 
@@ -8,15 +8,17 @@ description: 'Aerial robotics researcher'
 url: http://icsl-Jeon.github.io
 baseurl: ""
 twitter_username: 
-default_img: /assets/IMG_6950.jpg
+default_img: "/assets/img/IMG_6950.JPG"
 
 
 # Profile settings
-name: Boseong Felipe Jeon
-profile_img: /assets/IMG_6950.jpg
-profile: Doctoral candidate of Seoul national university 
+name: "Boseong Felipe Jeon"
+profile_img: /assets/img/IMG_6950.JPG
+profile: "Doctoral candidate of Seoul national university"
 social:
-  github: 
+  github: "https://github.com/icsl-Jeon"
+  youtube: "https://www.youtube.com/channel/UCPeLtCD0ouhFdLO60V7pjlw?view_as=subscriber"
+
 
 # Build settings
 markdown: kramdown
