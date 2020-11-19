@@ -1,47 +1,52 @@
-# Site/SEO settings
-email: "junbs95@gmail.com"
-permalink: /:year/:month/:day/:title/
-google_analytics: 
+locale: "en-US"
+title: Strata # Title of your site
+url: "https://icsl-jeon.github.io/" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+google_analytics_key: ""
 
-title: BOSEONG FELIPE JEON
-description: 'Aerial robotics researcher'
-url: http://icsl-Jeon.github.io
-baseurl: ""
-twitter_username: 
-default_img: "https://github.com/icsl-Jeon/icsl-Jeon.github.io/tree/main/assets/img/IMG_6950.JPG"
+# Default description in social shares for the jekyll-seo-tag gem
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 
+# Author details for the jekyll-seo-tag gem
+author:
+  name: Boseong Felipe Jeon
+  email: junbs95@gmail.com
+  twitter: # twitter username without the @ symbol
 
-# Profile settings
-name: "Boseong Felipe Jeon"
-profile_img: "https://github.com/icsl-Jeon/icsl-Jeon.github.io/tree/main/assets/img/IMG_6950.JPG"
-profile: "Doctoral candidate of Seoul national university"
+# Social details for the jekyll-seo-tag gem
 social:
-  github: "https://github.com/icsl-Jeon"
-  youtube: "https://www.youtube.com/channel/UCPeLtCD0ouhFdLO60V7pjlw?view_as=subscriber"
+  name: Strata Reloaded Template
+  links:
+    - https://github.com/comfusion/strata-reloaded-jekyll-template
 
+permalink: pretty
 
-# Build settings
-markdown: kramdown
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - octopress-autoprefixer
-compress_html:
-  clippings: all
-  comments: all
-  startings: [html, head, body]
-exclude:
-  - _screenshots
-  - .DS_Store
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE.txt
-  - README.md
+gems:
+  - "jekyll-feed"
+  - "jekyll-seo-tag"
+  - "jekyll-paginate"
+  - "jekyll-sitemap"
 
-# Pagination
-paginate: 5
-paginate_path: "/blog/page-:num"
+# Jekyll SEO Tag
+webmaster_verifications:
+  google: # 1234
+  bing: # 1234
+  alexa: # 1234
+  yandex: # 1234
 
-# Sass
-sass:
-  style: compressed
+# -----------
+# CloudCannon
+
+social_icons:
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - RSS
