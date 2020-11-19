@@ -5,8 +5,8 @@ date: 2020-11-19
 categories:
   - Jekyll
 description:
-image: https://picsum.photos/2000/1200?image=1003
-image-sm: https://picsum.photos/2000/1200?image=1003
+image: 
+image-sm: /assets/img/IMG_6950.JPG
 ---
 Etsy squid occupy pop-up. Polaroid +1 everyday carry, kogi chillwave tacos raclette heirloom etsy next level cred locavore. Blog street art DIY, pug crucifix asymmetrical chicharrones. Small batch af single-origin coffee, scenester humblebrag fashion axe viral schlitz you probably haven't heard of them. Kickstarter synth poutine brunch hoodie. Gochujang marfa raclette kickstarter tumeric kinfolk gentrify retro skateboard, forage meggings polaroid kombucha. Tilde mlkshk fam meggings.
 
