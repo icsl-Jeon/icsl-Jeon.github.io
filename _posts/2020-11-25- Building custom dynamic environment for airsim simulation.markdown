@@ -1,9 +1,19 @@
 ---
-title:  "ROS subscribing poses of objects in Unreal world using Airsim"
+title:  "Building custom dynamic environments for airsim simulation"
 date:   2016-01-08 15:04:23
 categories: [Airsim]
 tags: [Airsim]
 ---
+
+## Preliminaries 
+
+## Making a unreal project with airsim plugin 
+
+### 1. Make new custom project
+
+
+
+
 In this tutorial, I write the basic process to perform the simulation such as the below simualtion: 
 
 {% include youtubePlayer.html id="5YWw47K3w2Y" %}
