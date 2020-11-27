@@ -1,11 +1,14 @@
 ---
 title:  "ROS subscribing poses of objects in Unreal world using Airsim"
-date:   2016-01-08 15:04:23
+date:   2020-11-27 15:04:23
 categories: [Airsim]
 tags: [Airsim]
 ---
-In this tutorial, I write the basic process to perform the simulation such as the below simualtion: 
+In the previous tutorial, we looked into how to generate a custom unreal environment and spawn an character which moves along a spline curve. 
 
+We now proceed to more airsim 
+
+ 
 {% include youtubePlayer.html id="5YWw47K3w2Y" %}
 
 As you might guess, the pose of the female actor, the elephant and the horse is being fed into the 
