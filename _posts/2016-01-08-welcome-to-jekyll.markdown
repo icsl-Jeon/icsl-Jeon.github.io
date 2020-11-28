@@ -6,9 +6,41 @@ tags: [Airsim]
 ---
 In the previous tutorial, we looked into how to generate a custom unreal environment and spawn an character which moves along a spline curve. 
 
+Now we move on to associate the ROS with Unreal environment we created. For that, we use [airsim_ros_pkgs](https://github.com/icsl-Jeon/airsim_ros_pkgs) which is custom forked version from original package to include object pose extraction. 
+
+### Basic dependenices 
+
+* mavros_msgs in ROS 
+
+```
+sudo apt-get install ros-melodic-mavros-msgs  
+```
+
+* gcc 8.0 
+
+```
+ sudo apt install gcc-8 g++-8
+```
+
+### Building  `airsim_ros_pkgs`
+
+```
+cd ~/catkin_ws/src/AirSim/ros/src
+rm -r airsim_ros_pkgs
+git clone https://github.com/icsl-Jeon/airsim_ros_pkgs.git
+cd ~/catkin_ws
+catkin build airsim_tutorial_pkgs -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8
+```
+
+
+
+
+
+
+
 We now proceed to more airsim 
 
- 
+
 {% include youtubePlayer.html id="5YWw47K3w2Y" %}
 
 As you might guess, the pose of the female actor, the elephant and the horse is being fed into the 
