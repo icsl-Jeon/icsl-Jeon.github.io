@@ -1,44 +1,25 @@
 ---
-title:  "Building custom dynamic environments for airsim simulation"
+title:  "Ch1: Building custom dynamic environments"
 date:   2016-01-08 15:04:23
 categories: [Airsim]
 tags: [Airsim]
 ---
 
-## Preliminaries 
-
-## Making a unreal project with airsim plugin 
-
-### 1. Make new custom project
-
-
-
-
 In this tutorial, I write the basic process to perform the simulation such as the below simualtion: 
 
 {% include youtubePlayer.html id="5YWw47K3w2Y" %}
 
-As you might guess, the pose of the female actor, the elephant and the horse is being fed into the 
-ROS node which plans the movement of the drone.   
 
+As you might guess, the poses of the female actor, the elephant and the horse are being fed into the 
+ROS node which plans the movement of the drone. From this posting, we will walk through to learn how to conduct such simulation using Unreal, Airsim and ROS. The tested computer is based on Ubuntu 18.04. 
 
+## 1. Making a unreal project with airsim plugin 
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
+### Make new custom project
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+First, we need to build an unreal environmet for your own purpose. 
 
-Jekyll also offers powerful support for code snippets:
+### Try Airsim game mode and check things are OK  
 
-``` ruby
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-```
+Now, 
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
