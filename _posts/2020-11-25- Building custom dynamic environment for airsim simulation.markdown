@@ -17,9 +17,23 @@ ROS node which plans the movement of the drone. From this posting, we will walk 
 
 ### Make new custom project
 
-First, we need to build an unreal environmet for your own purpose. 
+Ok, we need to build an unreal environmet for your own purpose. Frist, we run Unreal Editor (UE) in `path/to/unreal/Engine/Binaries/Linux/UE4Editor`. This will exist once you have built the unreal engine in your linux. For efficient running, I added the following line in `~/.bashrc`.
+
+```bash
+alias unreal='~/UnrealEngine/Engine/Binaries/Linux/UE4Editor'
+```
+
+Now. turn it on by `$ unreal` in your terminal. 
+
+
+![image tooltip here](/_posts/ch1/s1.png)
+
 
 ### Try Airsim game mode and check things are OK  
 
-Now, 
+Now,  
+
+## 2. Creating a dynamic object (or multiple) moving along spline
+
+### Importing assets 
 
