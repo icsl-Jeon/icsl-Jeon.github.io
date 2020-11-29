@@ -144,6 +144,12 @@ All setting is done. We now have to decide how to activate the spline-moving for
 
   ![image tooltip here](/images/ch1/s18.png)
 
+
+
+### Triggering the spline-moving of the robot?
+
+
+
 What we should do is playing with block diagram consisting of the nodes and links. This is called *editing BLUEPRINT.*  If you want to be an advanced user of Airsim who can even handle what's going on in unreal world, highly recommend you to be familiar with this guy. 
 
   ![image tooltip here](/images/ch1/s19.gif)
