@@ -5,7 +5,7 @@ categories: [Airsim]
 tags: [Airsim]
 ---
 
-In this tutorial, I write the basic process to perform the simulation such as the below simualtion: 
+In this tutorial, I write the basic process to perform the simulation such as the below: 
 
 {% include youtubePlayer.html id="5YWw47K3w2Y" %}
 
