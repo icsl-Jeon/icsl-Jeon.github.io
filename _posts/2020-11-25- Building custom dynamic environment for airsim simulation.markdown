@@ -36,14 +36,14 @@ Then, you wil ses the following screen in your viewport where a robot (or mock h
 
 If you didn't speicify anything, the project folder should be created in `Documents/Unreal Projects/ArisimBasic`. 
 
-If you are interested in the asset of the robot, go to `Content/ThirdPersonBP/Blueprints`, and navigate the file. 
+**Note**: If you are interested in the asset of the robot, go to `Content/ThirdPersonBP/Blueprints`, and navigate the file. 
 
 
 ![image tooltip here](/images/ch1/s4.png)
 
-Click play button and move around the environment with like you do in Counter strike. Congraturation! your first custom unreal project. 
+Click play button and move around the environment  like you do in Counter strike. Congraturation! your first custom unreal project. 
 
-![image tooltip here](/images/ch1/s5.png)
+![image tooltip here](/images/ch1/s5.gif)
 
 
 ### Try Airsim game mode and check things are OK  
