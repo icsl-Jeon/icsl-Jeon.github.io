@@ -25,8 +25,10 @@ alias unreal='~/UnrealEngine/Engine/Binaries/Linux/UE4Editor'
 
 Now. turn it on by `$ unreal` in your terminal. 
 
+Then, select ThirdPerson template 
+![image tooltip here](/images/ch1/s2.png)
 
-![image tooltip here](/_posts/ch1/s1.png)
+![image tooltip here](/images/ch1/s1.png)
 
 
 ### Try Airsim game mode and check things are OK  
