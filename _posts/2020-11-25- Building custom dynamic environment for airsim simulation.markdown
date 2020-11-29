@@ -9,7 +9,6 @@ In this tutorial, I write the basic process to perform the simulation such as th
 
 {% include youtubePlayer.html id="5YWw47K3w2Y" %}
 
-
 As you might guess, the poses of the female actor, the elephant and the horse are being fed into the 
 ROS node which plans the movement of the drone. From this posting, we will walk through to learn how to conduct such simulation using Unreal, Airsim and ROS. The tested computer is based on Ubuntu 18.04. 
 
@@ -86,11 +85,17 @@ Were you able to find any difference? Might not. To find out how the plugin is a
 
 ![image tooltip here](/images/ch1/s6.png)
 
+If  you hit play button again, now the project will give you a pop up asking whether you will do car simulation like this: 
 
-### 
+![image tooltip here](/images/ch1/s7.png)
 
+Click. Then a disaster happens, where the car (SUV) is spawned on top of the robot. For a normal operation, we can remove the robot and will create a spawn location by adding `Player Start` actor.  
 
+![image tooltip here](/images/ch1/s8.png)
 
+If you play again, now car is spawned and you can drive it with keyboard. Have fun before we move onto the next section. 
+
+![image tooltip here](/images/ch1/s9.png)
 
 
 
