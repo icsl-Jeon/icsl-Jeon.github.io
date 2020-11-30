@@ -12,6 +12,14 @@ In this tutorial, I write the basic process to perform the simulation such as th
 As you might guess, the poses of the female actor, the elephant and the horse are being fed into the 
 ROS node which plans the movement of the drone. From this posting, we will walk through to learn how to conduct such simulation using Unreal, Airsim and ROS. The tested computer is based on Ubuntu 18.04. 
 
+The supplementary video for this posting can be found below:  
+
+{% include youtubePlayer.html id="izSMF3auLsY" %}
+
+
+
+
+
 ## 1. Making an unreal project with airsim plugin 
 
 ### Make new custom project
