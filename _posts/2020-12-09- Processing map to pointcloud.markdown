@@ -9,23 +9,27 @@ In this post, we endeavor to extract pointcloud (*.ply or .pcd) from  an unreal 
 
 
 
-You might be familiar with the ply and pcd format for encoding pointcloud (a.k.a pcl). These formats are commonly used for robotics application . For example,  
+You might be familiar with the ply and pcd format for encoding pointcloud (a.k.a pcl). These formats are commonly used for robotics application.
 
 The .umap extension  is what we get directly from Unreal Editor, once a level is created and saved  in a project.   The file consists of a lot of stuffs from `UnrealProject/Content` folder, which constructs the environment  what you are seeing from editor.  For example, the below is a `*.umap` that I am working on these days. 
 
-![image tooltip here](/images/ch3/factory1.png){: width="600" height="400"}{: .center} 
+![image tooltip here](/images/ch3/factory1.png){: width="50%" height="50%"}{: .center} 
 
-![image tooltip here](/images/ch3/factory2.png){: width="600" height="400"}{: .center} 
+![image tooltip here](/images/ch3/factory2.png){: width="50%" height="50%"}{: .center} 
 
-The ultimate purpose of Unreal to me is a simulation environment for my motion planning research. It is very common for a  motion planning algorithm to utilize a mapping algorithm such as [octomap](https://octomap.github.io/) and [voxblox](https://github.com/ethz-asl/voxblox).  Both of them receives the pointcloud as raw inputs. 
+The ultimate purpose of Unreal to me is a simulation environment for my motion planning research. It is very common for a  motion planning  to utilize a mapping algorithm such as [octomap](https://octomap.github.io/) and [voxblox](https://github.com/ethz-asl/voxblox).  Both of them receives the pointcloud as raw inputs. 
 
 This is why I am writing this post tagging Unreal. We, the motion planning engineer, often needs the global or local  pointclouds of a task space. In this post, I introduce two methods for doing that by 1) constructing `*.pcd` file of `*.umap` or 2) SLAM with a drone spawned in Unreal with AirSim Plugin. 
 
 ## 1. Extracting mesh of umap and converting it to pcl.       
 
-![image tooltip here](/images/ch3/process.png){: width="600" height="400"  description="summary of making pcd from mesh of umap"}{: .center} 
+![image tooltip here](/images/ch3/process.png){: width="100%" height="100%"  description="summary of making pcd from mesh of umap"}{: .center} 
 
- 
+ The first method is quite straight forward and accurate. We export **mesh** of the unreal map and  convert it to pointcloud format.    
+
+
+
+
 
 
 
