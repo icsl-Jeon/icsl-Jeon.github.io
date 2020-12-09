@@ -1,8 +1,8 @@
 ---
-title:  "Ch1: Building custom dynamic environments"
-date:   2016-01-08 15:04:23
-categories: [Airsim]
-tags: [Airsim]
+title:  "Ch3: Processing unreal map(.umap) to pointcloud (.pcd)"
+date:   2020-12-09 15:04:23
+categories: [Unreal]
+tags: [Unreal]
 ---
 
 In this tutorial, I write the basic process to perform the simulation such as the below: 
@@ -89,7 +89,7 @@ We are not here to make and play the game. We now focus on airsim stuff. To make
 
 Are you ready? Let's re run the AirsimBasic project. 
 
-Were you able to find any difference? Might not. To find out how the plugin is applied, open `World Outliner` window as below. Then you end up finding the new game mode `AirSimGameMode` has been already created. 
+Were you able to find any difference? Might not. To find out how the plugin is applied, open `World Settings` window as below. Then you end up finding the new game mode `AirSimGameMode` has been already created. 
 
 ![image tooltip here](/images/ch1/s6.png)
 
