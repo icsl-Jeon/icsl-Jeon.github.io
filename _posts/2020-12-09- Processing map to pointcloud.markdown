@@ -5,9 +5,13 @@ categories: [Unreal]
 tags: [Unreal]
 ---
 
-Here, we endeavor to extract pointcloud (*.ply or *.pcd) from  the unreal map (*.umap).
+In this post, we endeavor to extract pointcloud (*.ply or .pcd) from  an unreal map (.umap). 
 
-The former format is what we get directly from Unreal Editor, once a level is created in a project.   The format has a lot of stuffs from `UnrealProject/Content` folder, which constructs the environment  what you are seeing from editor.  For example, the below is a `*.umap` that I am working on these days. 
+
+
+You might be familiar with the ply and pcd format for encoding pointcloud (a.k.a pcl). These formats are commonly used for robotics application . For example,  
+
+The .umap extension  is what we get directly from Unreal Editor, once a level is created and saved  in a project.   The file consists of a lot of stuffs from `UnrealProject/Content` folder, which constructs the environment  what you are seeing from editor.  For example, the below is a `*.umap` that I am working on these days. 
 
 ![image tooltip here](/images/ch3/factory1.png){: width="600" height="400"}{: .center} 
 
@@ -19,7 +23,7 @@ This is why I am writing this post tagging Unreal. We, the motion planning engin
 
 ## 1. Extracting mesh of umap and converting it to pcl.       
 
-
+![image tooltip here](/images/ch3/process.png){: width="600" height="400"  description="summary of making pcd from mesh of umap"}{: .center} 
 
  
 
