@@ -1,11 +1,43 @@
 ---
-title:  "Ch3: Processing unreal map(.umap) to pointcloud (.pcd)"
+title:  "Ch3: Processing unreal map (.umap) to pointcloud (.ply or .pcd)"
 date:   2020-12-09 15:04:23
 categories: [Unreal]
 tags: [Unreal]
 ---
 
-In this tutorial, I write the basic process to perform the simulation such as the below: 
+Here, we endeavor to extract pointcloud (*.ply or *.pcd) from  the unreal map (*.umap).
+
+The former format is what we get directly from Unreal Editor, once a level is created in a project.   The format has a lot of stuffs from `UnrealProject/Content` folder, which constructs the environment  what you are seeing from editor.  For example, the below is a `*.umap` that I am working on these days. 
+
+![image tooltip here](/images/ch3/factory1.png){: width="600" height="400"}{: .center} 
+
+![image tooltip here](/images/ch3/factory2.png){: width="600" height="400"}{: .center} 
+
+The ultimate purpose of Unreal to me is a simulation environment for my motion planning research. It is very common for a  motion planning algorithm to utilize a mapping algorithm such as [octomap](https://octomap.github.io/) and [voxblox](https://github.com/ethz-asl/voxblox).  Both of them receives the pointcloud as raw inputs. 
+
+This is why I am writing this post tagging Unreal. We, the motion planning engineer, often needs the global or local  pointclouds of a task space. In this post, I introduce two methods for doing that by 1) constructing `*.pcd` file of `*.umap` or 2) SLAM with a drone spawned in Unreal with AirSim Plugin. 
+
+## 1. Extracting mesh of umap and converting it to pcl.       
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+ 
+
+
+
+
+
+I write the basic process to perform the simulation such as the below: 
 
 {% include youtubePlayer.html id="5YWw47K3w2Y" %}
 
@@ -20,7 +52,7 @@ The supplementary video for this posting can be found below:
 
 
 
-## 1. Making an unreal project with airsim plugin 
+## /1. Making an unreal project with airsim plugin 
 
 ### Make new custom project
 
