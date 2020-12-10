@@ -49,7 +49,7 @@ While selecting only the assest of interest (yellow color in the above), let us 
 
 > Wait, the coordinate system of the obj file ? Would it be different with Unreal ?  
 >
-> Answer: same location of origin, complete different xyz axis. They can not be transformed with standard SO3 roation 
+> Answer: same location of origin, complete different xyz axis. They can not be transformed with standard SO3 rotation. 
 
 
 
@@ -64,9 +64,11 @@ As can be seen, you will have to do some manipulation to suit your coordinate sy
 
 #### Step 2 : Convert mesh file (.obj) to pcl (.ply) using *MeshLab*
 
+We are not on the last step.  For starter, download [MeshLab](https://www.meshlab.net/). Although I ran it on Window, it might support other OS.  The application has a variety of features related to mesh-operation. But for the moment, we will focus on how to generate the pointcloud of the mesh of unreal map. 
+
+First, let's import the the mesh file by `File>Import Mesh`. Select the obj you created
 
 
- For starter, download [MeshLab](https://www.meshlab.net/).
 
 
 
