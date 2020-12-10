@@ -25,7 +25,7 @@ This is why I am writing this post tagging Unreal. We, the motion planning engin
 ![image tooltip here](/images/ch3/process.png){: width="100%" height="100%"  description="summary of making pcd from mesh of umap"}{: .center}  
 *summary of making pcd from mesh of umap*
 
-
+The video version of explanation is available at my [youtube channel](https://youtu.be/cwrNCQNEEvc)
 
 #### Step 1 : export mesh (.obj) file of considered assets from unreal editor
 
