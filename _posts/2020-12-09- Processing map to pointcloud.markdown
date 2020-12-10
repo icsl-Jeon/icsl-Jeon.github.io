@@ -66,11 +66,35 @@ As can be seen, you will have to do some manipulation to suit your coordinate sy
 
 We are not on the last step.  For starter, download [MeshLab](https://www.meshlab.net/). Although I ran it on Window, it might support other OS.  The application has a variety of features related to mesh-operation. But for the moment, we will focus on how to generate the pointcloud of the mesh of unreal map. 
 
-First, let's import the the mesh file by `File>Import Mesh`. Select the obj you created
+First, let's import the the mesh file by `File>Import Mesh`. There, select the obj you created. After waiting for a few second,  you will see the following view: 
+
+![image tooltip here](/images/ch3/meshlab1.png){: width="100%" height="100%" }{: .center}  
+
+We now sample (or generate) on the meshes of the obj file, from *Possion-Disk* method. 
+
+![image tooltip here](/images/ch3/meshlab2.png){: width="100%" height="100%" }{: .center}  
+
+As I am not an expert in the PCL processing, I just tried 1E+6 points when setting the `Number of samples` .  Except that, I did not change any items. There you go, now a points layer (*Poisson-disk Samples*) appeared on the upper-right panel. You might want look around the points. You can customize the visualization of them. 
+
+![image tooltip here](/images/ch3/meshlab3.png){: width="100%" height="100%" }{: .center}  
+
+Finished! Just click the disk icon on the top menubar and set the output format as `.ply`.  The below is the importing result of the ply file form Matlab. I used the this [code](https://kr.mathworks.com/help/vision/ref/pcread.html) in matlab. 
+
+![image tooltip here](/images/ch3/matlab.png){: width="100%" height="100%" }{: .center}  
+
+
+
+## Method 2: Spawning a drone and performing SLAM.       
+
+TODO
 
 
 
 
+
+ 
+
+ 
 
 
 
