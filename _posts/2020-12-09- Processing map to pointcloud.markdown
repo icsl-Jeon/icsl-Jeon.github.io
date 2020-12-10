@@ -27,6 +27,10 @@ This is why I am writing this post tagging Unreal. We, the motion planning engin
 
 The video version of explanation is available at my [youtube channel](https://youtu.be/cwrNCQNEEvc)
 
+{% include youtubePlayer.html id="cwrNCQNEEvc" %}
+
+
+
 #### Step 1 : export mesh (.obj) file of considered assets from unreal editor
 
 
