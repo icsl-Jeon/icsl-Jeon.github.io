@@ -90,23 +90,19 @@ Finished! Just click the disk icon on the top menubar and set the output format 
 
 #### Step 3 : Import the pointcloud into ROS 
 
-You might want to use the `ply` file to your ROS project. For that, I will publish the `sensor_msgs/PointCloud2` typed topic from the file. Before that, I will reduce the field of pointcloud for Rviz compatibility. The field of pointcloud which are obtained from the procedure I explained is that `x y z normal_x normal_y normal_z` where the last three are not necessary. I want a new pcd file whose field is `x y z`. Follow the below:
+You might want to use the `ply` file to your ROS project. For that, I will publish the `sensor_msgs/PointCloud2` typed topic from the file. Before that, I will reduce the field of pointcloud for Rviz compatibility. The field of pointcloud which are obtained from the procedure I explained is that `x y z normal_x normal_y normal_z` where the last three are not necessary. I want a new pcd file whose field is `x y z`. Also, the transformation is applied to align x+ axis to z+ axis.   
 
-In matalb, 
-
-```matlab
-ptCloudFull = pcread('your_pointcloud.ply')
-ptCloudXYZ = pointCloud(ptCloudFull.Location*1e-2) % important ! unit 
-pcwrite(ptCloudXYZ,'your_pointcloud.pcd')
-```
-
-Or if you want a transformation so that the x-y plane is aligned with floor, 
+In matalb, I did : 
 
 ```matlab
-trans = affine3d([0 -1 0 0; 0 0 1 0; 1 0 0 0 ; 0 0 0 1 ])
-ptCloudXYZ = pctransform(ptCloudXYZ,affine3d(trans))
-pcwrite(ptCloudXYZ,'your_pointcloud.pcd')
+trans = affine3d([0 -1 0 0 ; 0 0 -1 0 ; 1 0 0 0 ; 0 0 0 1]);
+ptCloudTransformed = pctransform(ptCloudOrig,(trans));
+location = [-ptCloudTransformed.Location(:,1) ptCloudTransformed.Location(:,2) -ptCloudTransformed.Location(:,3)] *1e-2;
+ptCloud = pointCloud(location); % final pcd 
+pcshow(ptCloud)
 ```
+
+Please note that the transformation might be adjusted for your purpose. 
 
 Let's bring it into ROS: 
 
