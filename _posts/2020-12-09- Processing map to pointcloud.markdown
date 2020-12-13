@@ -82,7 +82,7 @@ As I am not an expert in the PCL processing, I just tried 1E+6 points when setti
 
 ![image tooltip here](/images/ch3/meshlab3.png){: width="100%" height="100%" }{: .center}  
 
-Finished! Just click the disk icon on the top menubar and set the output format as `.ply`.  The below is the importing result of the ply file form Matlab. I used the this [code](https://kr.mathworks.com/help/vision/ref/pcread.html) in matlab. 
+Finished! Just click the disk icon on the top menubar and set the output format as `.ply`.  The below is the importing result of the ply file form Matlab. I used the this [code](https://kr.mathworks.com/help/vision/ref/pcread.html) in matlab.  What you have to note here is that **scale** of the ply. The output ply from unreal map uses their own unit which is `cm` !  So you should multiply `1e-2` to all the point to be used as `m`.  
 
 ![image tooltip here](/images/ch3/matlab.png){: width="100%" height="100%" }{: .center}  
 
@@ -96,7 +96,7 @@ In matalb,
 
 ```matlab
 ptCloudFull = pcread('your_pointcloud.ply')
-ptCloudXYZ = pointCloud(ptCloudFull.Location)
+ptCloudXYZ = pointCloud(ptCloudFull.Location*1e-2) % important ! unit 
 pcwrite(ptCloudXYZ,'your_pointcloud.pcd')
 ```
 
@@ -121,10 +121,19 @@ Subscribing the topic gave me the following:
 #### Step 4 (optional) : building octomap from pcd file 
 
 ```
-https://github.com/gaoxiang12/octomap_tutor.git
+git clone https://github.com/gaoxiang12/octomap_tutor.git
+cd octomap_tutor
+./build.sh
+./bin/pcd2octomap your_pointcloud.pcd your_octomap.bt
 ```
 
 
+
+The octomap output example is shown below: 
+
+![image tooltip here](/images/ch3/pcl_octomap.png){: width="100%" height="100%" }
+
+#### 
 
 ####  
 
