@@ -88,6 +88,34 @@ Finished! Just click the disk icon on the top menubar and set the output format 
 
 
 
+#### Step 3 : Import the pointcloud into ROS 
+
+You might want to use the `ply` file to your ROS project. For that, I will publish the `sensor_msgs/PointCloud2` typed topic from the file. Before that, I will reduce the field of pointcloud for Rviz compatibility. The field of pointcloud which are obtained from the procedure I explained is that `x y z normal_x normal_y normal_z` where the last three are not necessary. I want a new pcd file whose field is `x y z`. Follow the below:
+
+In matalb, 
+
+```
+ptCloudFull = pcread('your_pointcloud.ply')
+ptCloudXYZ = pointCloud(ptCloudFull.Location)
+pcwrite(ptCloudXYZ,'your_pointcloud.pcd')
+```
+
+Let's bring it into ROS: 
+
+```
+rosrun pcl_ros pcd_to_pointcloud your_pointcloud.pcd 0.1 _frame_id:=/map
+```
+
+Subscribing the topic gave me the following: 
+
+![image tooltip here](/images/ch3/pcl_ros.png){: width="100%" height="100%" }
+
+
+
+
+
+
+
 ## Method 2: Spawning a drone and performing SLAM.       
 
 TODO
