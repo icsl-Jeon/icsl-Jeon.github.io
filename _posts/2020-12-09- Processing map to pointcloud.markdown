@@ -94,9 +94,17 @@ You might want to use the `ply` file to your ROS project. For that, I will publi
 
 In matalb, 
 
-```
+```matlab
 ptCloudFull = pcread('your_pointcloud.ply')
 ptCloudXYZ = pointCloud(ptCloudFull.Location)
+pcwrite(ptCloudXYZ,'your_pointcloud.pcd')
+```
+
+Or if you want a transformation so that the x-y plane is aligned with floor, 
+
+```matlab
+trans = affine3d([0 -1 0 0; 0 0 1 0; 1 0 0 0 ; 0 0 0 1 ])
+ptCloudXYZ = pctransform(ptCloudXYZ,affine3d(trans))
 pcwrite(ptCloudXYZ,'your_pointcloud.pcd')
 ```
 
@@ -109,6 +117,16 @@ rosrun pcl_ros pcd_to_pointcloud your_pointcloud.pcd 0.1 _frame_id:=/map
 Subscribing the topic gave me the following: 
 
 ![image tooltip here](/images/ch3/pcl_ros.png){: width="100%" height="100%" }
+
+#### Step 4 (optional) : building octomap from pcd file 
+
+```
+https://github.com/gaoxiang12/octomap_tutor.git
+```
+
+
+
+####  
 
 
 
