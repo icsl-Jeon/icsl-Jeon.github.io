@@ -25,7 +25,7 @@ sudo apt-get install ros-melodic-mavros-msgs
  sudo apt install gcc-8 g++-8
 ```
 
-* Building  airsim_ros_pkgs
+* **Building  airsim_ros_pkgs**
 
 ```
 cd ~/catkin_ws/src/AirSim/ros/src
@@ -111,6 +111,7 @@ Now launch it:
 roslaunch airsim_ros_pkgs airsim_node.launch 
 ```
 Then, the corresponding pose topic will be published in ENU (see /Man_pose and /Woman_15_pose). 
+
 ![image tooltip here](/images/ch2/topic.png){: width="50%" height="50%" }{:center}  
 ![image tooltip here](/images/ch2/poseRviz.gif){: width="100%" height="100%" }{:center}  
 
