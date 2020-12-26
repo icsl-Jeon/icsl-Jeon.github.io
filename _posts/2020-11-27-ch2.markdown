@@ -115,5 +115,11 @@ Then, the corresponding pose topic will be published in ENU (see /Man_pose and /
 ![image tooltip here](/images/ch2/topic.png){: width="50%" height="50%" }{:center}  
 ![image tooltip here](/images/ch2/poseRviz.gif){: width="100%" height="100%" }{:center}  
 
+What you have to notice here is the coordinate system of AirSim ENU vs Unreal (PlayerStart Actor).
+ 
+![image tooltip here](/images/ch2/axis.png){: width="100%" height="100%" }{:center}  
+
+You might have to properly consider  Unreal map origin -> PlayerStart Actor pose -> AirSim coordinate. 
+
 
 
