@@ -1,0 +1,118 @@
+---
+title:  "Ch2: ROS subscribing poses of objects in Unreal"
+date:   2020-11-27 15:04:23
+categories: [Airsim]
+tags: [Airsim]
+---
+In the previous tutorial, we looked into how to generate a custom unreal environment and spawn an character which moves along a spline curve. 
+Now we move on to associate the ROS with Unreal environment we created. For that, we use [airsim_ros_pkgs](https://github.com/icsl-Jeon/airsim_ros_pkgs) which is a custom forked version from the original package to include object pose extraction. 
+
+Disclaimer: I base this post on [PX4 setup instruction from airsim](https://github.com/microsoft/AirSim/blob/master/docs/px4_sitl.md) 
+as of current data. Thus, the details can be changed when you read this .
+## 1. Setup
+
+### Basic dependenices 
+
+* **mavros_msgs** 
+
+```
+sudo apt-get install ros-melodic-mavros-msgs  
+```
+
+* **gcc 8.0** 
+
+```
+ sudo apt install gcc-8 g++-8
+```
+
+* Building  airsim_ros_pkgs
+
+```
+cd ~/catkin_ws/src/AirSim/ros/src
+rm -r airsim_ros_pkgs
+git clone https://github.com/icsl-Jeon/airsim_ros_pkgs.git
+cd ~/catkin_ws
+catkin build airsim_tutorial_pkgs -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8
+```
+
+* **PX4 firmware for SITL (software-in-the-loop)**
+```html
+git clone https://github.com/PX4/Firmware.git
+cd Firmware
+git checkout v1.10.1 
+```
+
+
+### Configuring the airsim vehicle under PX4 
+
+Download an example `setting.json` from my [drive](https://drive.google.com/file/d/1O5jBOMDusBs9tLmFTPET7cEZeFa1wUUE/view?usp=sharing). Move the file into `~/Documents/AirSim` and replace the original one (you mush have the folder if you had followed the chapter 1 posting). 
+
+## 2. Simulation 
+
+### Spawn PX4 vehicle drone in unreal 
+First, we have to specify the start location for the drone. Bring `PlayerStart` actor into your world.
+
+![image tooltip here](/images/ch2/playerstart.png){: width="70%" height="70%" }{: .center}  
+ 
+The actor is where your airsim drone is *spawned*. 
+Also, it becomes the reference frame of all the airsim data (e.g. pose and tf).
+ What if the drone is spawned in the air 
+because  `PlayerStart` is not on the ground? 
+Simple: it falls into the ground (let us call it *drop distance*). Thus, in most case, your drone starts hovering from the ground 
+while having `-z` value in the sense of ENU frame. From this reason, I always try to squeeze 
+the z-scale of the capsule `PlayerStart` to reduce the drop distance and to position the z value as low as possible.     
+Before start simulation, you should prepare PX4-SITL. Let's go a terminal:
+
+```html
+cd path/to/PX4
+make px4_sitl_default none_iris
+```
+Then you PX4 is waiting you by saying below:
+![image tooltip here](/images/ch2/px4waiting.png){: width="70%" height="70%" }{:center}  
+
+Return to UE4Editor. 
+Set the game-mode as `AirSimGameMode` as I explained from the previous section. Now, hit play button in the editor. 
+A drone will be welcoming you. 
+
+![image tooltip here](/images/ch2/spawning.gif){: width="100%" height="100%" }{:center}  
+From this, Unreal and AirSim is connected.
+
+### Subscribing ROS topic for pose of dynamic objects  
+Now, it is time to connect AirSim and ROS. First, identify the object names (ID name) that you want to get. 
+
+![image tooltip here](/images/ch2/idname.png){: width="100%" height="100%" }{:center}  
+
+The name appears when you put mouse cursor (Woman_15). You fill the names of interest in `airsim_node.launch' of my package. 
+(object_name_set)
+```html
+
+<launch>
+
+	<node name="airsim_node" pkg="airsim_ros_pkgs" type="airsim_node" output="screen">
+	<!--added by JBS-->
+	<!-- <node pkg="nodelet" type="nodelet" name="airsim_nodelet_manager" args="manager" output="screen" /> -->
+	<!-- <node pkg="nodelet" type="nodelet" name="airsim_nodelet" args="standalone airsim_ros_pkgs/airsim_ros_nodelet airsim_nodelet_manager" output="screen"/> -->
+
+		<!-- ROS timer rates. Note that timer callback will be processed at maximum possible rate, upperbounded by the following ROS params -->
+		<param name="is_vulkan" type="bool" value="false" /> 
+		<param name="update_airsim_img_response_every_n_sec" type="double" value="0.05" /> 
+		<param name="update_airsim_control_every_n_sec" type="double" value="0.001" />
+		<param name="update_lidar_every_n_sec" type="double" value="0.01" />
+		<rosparam param="object_name_set">[Man,Woman_15]</rosparam>
+	</node>
+	<!-- Static transforms -->
+	<include file="$(find airsim_ros_pkgs)/launch/static_transforms.launch"/>
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find airsim_ros_pkgs)/rviz/config.rviz"/>
+</launch>
+```
+Now launch it:
+
+```html
+roslaunch airsim_ros_pkgs airsim_node.launch 
+```
+Then, the corresponding pose topic will be published in ENU (see /Man_pose and /Woman_15_pose). 
+![image tooltip here](/images/ch2/topic.png){: width="50%" height="50%" }{:center}  
+![image tooltip here](/images/ch2/poseRviz.gif){: width="100%" height="100%" }{:center}  
+
+
+
