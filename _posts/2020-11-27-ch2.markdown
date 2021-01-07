@@ -32,7 +32,7 @@ cd ~/catkin_ws/src/AirSim/ros/src
 rm -r airsim_ros_pkgs
 git clone https://github.com/icsl-Jeon/airsim_ros_pkgs.git
 cd ~/catkin_ws
-catkin build airsim_tutorial_pkgs -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8
+catkin build airsim_ros_pkgs -DCMAKE_C_COMPILER=gcc-8 -DCMAKE_CXX_COMPILER=g++-8
 ```
 
 * **PX4 firmware for SITL (software-in-the-loop)**
